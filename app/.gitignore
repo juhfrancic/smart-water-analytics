@@ -1,0 +1,13 @@
+# Ignorar dependências do Front-end e Mobile
+node_modules/
+android/
+ios/
+
+# Ignorar lixo do Python
+__pycache__/
+venv/
+env/
+*.pyc
+
+# Ignorar arquivos sensíveis
+.env
