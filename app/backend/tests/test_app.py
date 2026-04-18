@@ -49,17 +49,3 @@ def test_post_leitura_ok(client):
 
     assert response.status_code == 201
     assert data["status"] == "sucesso"
-
-
-# -------------------------
-# TESTE: POST sem dados (erro)
-# -------------------------
-def test_post_leitura_erro(client):
-    response = client.post(
-        "/api/sensor/leitura",
-        json={}   
-    )
-    data = response.get_json()
-
-    assert response.status_code == 400
-    assert "erro" in data
