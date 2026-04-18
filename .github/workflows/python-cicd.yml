@@ -2,7 +2,7 @@ name: Python CI/CD
 
 on:
   push:
-    branches: ["develop", "uat", "main"]
+    branches: ["dev", "main"]
 
   pull_request:
     branches: ["main"]
