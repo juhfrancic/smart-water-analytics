@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saneamento Inteligente - CCO</title>
+
+    <!-- ✅ Leaflet CSS no <head> -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- ✅ Leaflet JS no <head> também — assim está disponível quando main.js rodar -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="scada-container">
+        <div id="map-panel">
+            <div id="map"></div>
+        </div>
+
+        <div id="dashboard-panel">
+            <header class="dash-header">
+                <h1 id="txt-nome-ponto">Selecione uma instalação no mapa</h1>
+                <span id="badge-status" class="badge">Aguardando...</span>
+            </header>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <h3>Pressão</h3>
+                    <p id="kpi-pressao">-- <span class="unit">MPa</span></p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Vazão</h3>
+                    <p id="kpi-vazao">-- <span class="unit">L/m</span></p>
+                </div>
+                <div class="kpi-card">
+                    <h3>Nível</h3>
+                    <p id="kpi-nivel">-- <span class="unit">%</span></p>
+                </div>
+            </div>
+
+            <!-- Sub-pontos do bairro -->
+            <div class="alertas-section" id="subpontos-section">
+                <h3>Pontos monitorados no setor</h3>
+                <div id="subpontos-container"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Tendência de perdas — últimos 5 dias</h3>
+                <div class="canvas-wrapper">
+                    <canvas id="graficoPerdas"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ✅ Chart.js antes do main.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- ✅ Seu script por último -->
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

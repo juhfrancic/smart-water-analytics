@@ -1,0 +1,30 @@
+﻿*, *::before, *::after { box-sizing: border-box; }
+body, html { margin:0; padding:0; font-family:'Segoe UI',sans-serif; background:#0f172a; color:#f8fafc; height:100%; overflow:hidden; }
+.scada-container { display:flex; height:100vh; width:100vw; }
+#map-panel { flex:1.2; height:100vh; position:relative; }
+#map { height:100%; width:100%; background:#0b0f19; }
+#dashboard-panel { flex:0.8; padding:20px; display:flex; flex-direction:column; background:#1e293b; border-left:2px solid #334155; overflow-y:auto; height:100vh; gap:15px; }
+.dash-header { display:flex; justify-content:space-between; align-items:center; }
+.dash-header h1 { font-size:1.2rem; margin:0; color:#38bdf8; }
+.badge { padding:5px 12px; border-radius:20px; font-weight:bold; font-size:0.75rem; background:#475569; color:#fff; }
+.status-normal  { background:#10b981; }
+.status-alerta  { background:#f59e0b; }
+.status-critico { background:#ef4444; }
+.kpi-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.kpi-card { background:#0f172a; padding:12px; border-radius:8px; text-align:center; border-bottom:3px solid #38bdf8; }
+.kpi-card h3 { font-size:0.75rem; color:#94a3b8; margin:0 0 8px 0; }
+.kpi-card p { font-size:1.3rem; font-weight:bold; margin:0; }
+.unit { font-size:0.75rem; color:#64748b; }
+.chart-container { background:#0f172a; padding:15px; border-radius:8px; }
+.chart-container h3 { font-size:0.8rem; color:#94a3b8; margin:0 0 10px 0; }
+.canvas-wrapper { height:160px; position:relative; }
+.alertas-section { background:#0f172a; padding:15px; border-radius:8px; }
+.alertas-section h3 { font-size:0.8rem; color:#94a3b8; margin:0 0 10px 0; }
+.alerta-item { font-size:0.78rem; padding:8px 10px; border-radius:6px; margin-bottom:6px; line-height:1.5; }
+.alerta-critico { background:rgba(239,68,68,0.15); border-left:3px solid #ef4444; color:#fca5a5; }
+.alerta-alerta  { background:rgba(245,158,11,0.15); border-left:3px solid #f59e0b; color:#fcd34d; }
+.alerta-ok      { background:rgba(16,185,129,0.15); border-left:3px solid #10b981; color:#6ee7b7; }
+.manutencao-item { font-size:0.78rem; padding:8px 10px; border-radius:6px; margin-bottom:6px; line-height:1.5; background:rgba(56,189,248,0.1); border-left:3px solid #38bdf8; color:#bae6fd; }
+.subponto-item { font-size:0.78rem; padding:6px 10px; border-radius:6px; margin-bottom:4px; background:rgba(56,189,248,0.08); border-left:3px solid #38bdf8; color:#cbd5e1; display:flex; gap:8px; align-items:center; flex-wrap:wrap; }
+.subponto-tipo { color:#94a3b8; min-width:160px; }
+.subponto-val  { color:#38bdf8; font-weight:bold; }
