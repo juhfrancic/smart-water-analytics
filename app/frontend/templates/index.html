@@ -17,13 +17,13 @@
         <div id="map-panel">
             <div id="map"></div>
         </div>
-
-        <div id="dashboard-panel">
+          <div id="dashboard-panel">
             <header class="dash-header">
                 <h1 id="txt-nome-ponto">Selecione uma instalação no mapa</h1>
                 <span id="badge-status" class="badge">Aguardando...</span>
             </header>
 
+            <!-- KPIs -->
             <div class="kpi-grid">
                 <div class="kpi-card">
                     <h3>Pressão</h3>
@@ -39,16 +39,40 @@
                 </div>
             </div>
 
+            <!-- Timestamp última leitura -->
+            <div class="ultima-leitura">
+                <span>Última leitura:</span>
+                <span id="txt-timestamp">--</span>
+            </div>
+
             <!-- Sub-pontos do bairro -->
             <div class="alertas-section" id="subpontos-section">
                 <h3>Pontos monitorados no setor</h3>
                 <div id="subpontos-container"></div>
             </div>
 
+
+            <!-- Gráfico de eficiência -->
             <div class="chart-container">
-                <h3>Tendência de perdas — últimos 5 dias</h3>
+                <h3>Eficiência do setor — últimos 7 dias</h3>
                 <div class="canvas-wrapper">
-                    <canvas id="graficoPerdas"></canvas>
+                    <canvas id="graficoEficiencia"></canvas>
+                </div>
+            </div>
+
+            <!-- Alertas ativos -->
+            <div class="alertas-section">
+                <h3>⚠ Alertas ativos</h3>
+                <div id="alertas-container">
+                    <div class="alerta-item alerta-ok">Selecione um ponto no mapa</div>
+                </div>
+            </div>
+
+            <!-- Manutenções -->
+            <div class="alertas-section">
+                <h3>🔧 Manutenções recentes</h3>
+                <div id="manutencoes-container">
+                    <p style="color:#64748b;font-size:0.8rem;">Selecione um ponto no mapa</p>
                 </div>
             </div>
         </div>
